@@ -9,8 +9,8 @@ contract StarNotary is ERC721 {
     }
 
 //  Add a name and a symbol for your starNotary tokens
-    string public name = "WebCelere Token";
-    string public symbol = "WCTK";
+    string public name = "Star Token";
+    string public symbol = "STTK";
 //
 
     mapping(uint256 => Star) public tokenIdToStarInfo;
@@ -56,11 +56,31 @@ contract StarNotary is ERC721 {
 
 // Add a function called exchangeStars, so 2 users can exchange their star tokens...
 //Do not worry about the price, just write code to exchange stars between users.
+    function exchangeStars(
+        address _user1,
+        address _user2,
+        uint256 _tokenId1,
+        uint256 _tokenId2)
+    public {
+        require(ownerOf(_tokenId1) == _user1);
+        require(ownerOf(_tokenId2) == _user2);
 
+        _removeTokenFrom(_user1, _tokenId1);
+        _addTokenTo(_user2, _tokenId1);
+
+        _removeTokenFrom(_user2, _tokenId2);
+        _addTokenTo(_user1, _tokenId2);
+
+        emit Transfer(_user1, _user2, _tokenId1);
+        emit Transfer(_user2, _user1, _tokenId2);
+
+    }
 //
 
 // Write a function to Transfer a Star. The function should transfer a star from the address of the caller.
 // The function should accept 2 arguments, the address to transfer the star to, and the token ID of the star.
 //
-
+    function transferStar(address _to, uint256 _tokenId) public {
+        safeTransferFrom(msg.sender, _to, _tokenId);
+    }
 }

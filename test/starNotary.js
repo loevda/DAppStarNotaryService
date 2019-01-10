@@ -68,12 +68,41 @@ it('lets user2 buy a star and decreases its balance in ether', async() => {
 // 1) The token name and token symbol are added properly.
 describe('token', function(){
     it('has correct name', async() => {
-        assert.equal(await instance.name.call(), 'WebCelere Token');
+        assert.equal(await instance.name.call(), 'Star Token');
     });
     it('has correct symbol', async() => {
-        assert.equal(await instance.symbol.call(), 'WCTK');
+        assert.equal(await instance.symbol.call(), 'STTK');
     });
-})
+});
 
 // 2) 2 users can exchange their stars.
+it('lets 2 users exchange theirs stars', async () => {
+    let user1 = accounts[1];
+    let user2 = accounts[2];
+    let user3 = accounts[3];
+    let starId1 = 566;
+    let starId2 = 866;
+    await instance.createStar('awesome star', starId1, {from: user1});
+    await instance.createStar('fabulous star', starId2, {from: user2});
+    //approval
+    await instance.approve(user3, starId1, {from: user1});
+    await instance.approve(user3, starId2, {from: user2});
+    //exchange
+    await instance.exchangeStars(user1, user2, starId1, starId2, {from: user3});
+    //assert
+    let ownerStarId2 = await instance.ownerOf(starId2);
+    let ownerStarId1 = await instance.ownerOf(starId1);
+    expect([ownerStarId2, ownerStarId1]).to.deep.equal([user1, user2]);
+});
+
+
+
 // 3) Stars Tokens can be transferred from one address to another.
+it('lets transfer a star token from one address to another', async() => {
+    let user1 = accounts[1];
+    let user2 = accounts[2];
+    let starId = 88;
+    await instance.createStar('Unique star 1', starId, {from: user1});
+    await instance.transferStar(user2, starId, {from: user1});
+    assert.equal(await instance.ownerOf(starId), user2);
+});
