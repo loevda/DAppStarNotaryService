@@ -64,16 +64,8 @@ contract StarNotary is ERC721 {
     public {
         require(ownerOf(_tokenId1) == _user1);
         require(ownerOf(_tokenId2) == _user2);
-
-        _removeTokenFrom(_user1, _tokenId1);
-        _addTokenTo(_user2, _tokenId1);
-
-        _removeTokenFrom(_user2, _tokenId2);
-        _addTokenTo(_user1, _tokenId2);
-
-        emit Transfer(_user1, _user2, _tokenId1);
-        emit Transfer(_user2, _user1, _tokenId2);
-
+        safeTransferFrom(_user1, _user2, _tokenId1);
+        safeTransferFrom(_user2, _user1, _tokenId2);
     }
 //
 
