@@ -5,5 +5,14 @@
 To setup the project for review do the following:
 1. Clone the repository
 2. Run command __npm install__ to install the project dependencies.
-3. Run __npm run dev__ to run the server. Server is listening at **http://localhost:8080**.
+3. Create an .env file in the project root folder and add you Infura API KEY:
+   INFURA_KEY=YOUR_INFURA_API_KEY
+4. Create a .secret file in the project root folder and add your wallet seed.
+3. Run __npm run dev__ to run the app. The app is running at **http://localhost:8080**.
+
+## Token information
+
+| Token name           | Token code | contact address                                                    | 
+|----------------------|------------|--------------------------------------------------------------------|
+| Star Token           | STTK       | 0xce636f70e03a8b09bd3388d4651eac71e43d3ceb2323ad50675afa6fe4bd9d84 |
 
