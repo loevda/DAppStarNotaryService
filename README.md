@@ -12,7 +12,7 @@ To setup the project for review do the following:
 
 ## Token information
 
-| Token name           | Token code | contact address                                                    | 
+| Token name           | Token code | Contract address on Rinkeby test network                           | 
 |----------------------|------------|--------------------------------------------------------------------|
-| Star Token           | STTK       | 0xce636f70e03a8b09bd3388d4651eac71e43d3ceb2323ad50675afa6fe4bd9d84 |
+| Star Token           | STTK       | 0x19a9529529CB1128d541b247937bBB5F608Ca7Bf                         |
 
