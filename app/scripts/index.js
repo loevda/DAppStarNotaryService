@@ -74,7 +74,8 @@ const App = {
 
     setStarInfo: function (starName, id) {
         const starInfo = document.getElementById('starInfo');
-        starInfo.innerHTML = `The name of the star with an ID of ${id} is ${starName}`;
+        const innerHtml = starName ? `The name of the star with an ID of ${id} is ${starName}` : `No result for star with an ID of ${id}`;
+        starInfo.innerHTML = innerHtml;
     },
 
 }
