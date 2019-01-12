@@ -11,9 +11,9 @@ To setup the project for review do the following:
    ```
    brew install libpng
    ```
-3. Create an .env file in the project root folder and add you Infura API KEY:
-   INFURA_KEY=YOUR_INFURA_API_KEY
-4. Create a .secret file in the project root folder and add your wallet seed.
+3. Create an .env file in the project root folder and add you Infura API KEY:<br />
+   __INFURA_KEY=YOUR_INFURA_API_KEY__
+4. Create a __.secret__ file in the project root folder and add your wallet seed.
 3. Run __npm run dev__ to run the app. The app is running at **http://localhost:8080**.
 
 ## Token information
