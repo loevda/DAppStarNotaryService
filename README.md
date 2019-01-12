@@ -1,5 +1,7 @@
 # Decentralized Star Notary Service
 
+![DApp screenshot](app/images/notarydapp800.png?raw=true "Title")
+
 ## Setup project for Review.
 
 To setup the project for review do the following:

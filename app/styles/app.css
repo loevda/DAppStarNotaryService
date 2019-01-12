@@ -1,24 +1,38 @@
 body {
-  margin-left: 25%;
-  margin-right: 25%;
-  margin-top: 10%;
-  font-family: "Open Sans", sans-serif;
+  background: url('../images/universe-1044107_1920.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 label {
   display: inline-block;
-  width: 100px;
+    text-align: center;
+    background: white;
+    border-radius: 6px 0px 0px 6px;
+    border: 1px solid whitesmoke;
+    padding: 5px;
+    font-size: 16px;
+    font-family: 'Bangers', cursive;
+    width: 80px;
 }
 
 input {
-  width: 500px;
+  width: 200px;
   padding: 5px;
   font-size: 16px;
+    border-radius: 0px 6px 6px 0px;
+    border: 1px solid whitesmoke;
 }
 
 button {
-  font-size: 16px;
-  padding: 5px;
+  padding: 8px;
+    border-radius: 6px 6px 6px 6px;
+    font-size: 22px;
+    font-family: 'Bangers', cursive;
+    text-align: center;
+    width: 280px;
 }
 
 h1, h2 {
@@ -49,4 +63,111 @@ h3 {
 
 .hint {
   color: #666;
+}
+
+
+.mt128 {
+    margin-top: 128px;
+}
+
+
+.niceTile {
+    text-align: center;
+    background: white;
+    border-radius: 8px;
+    border: 6px solid whitesmoke;
+    padding: 6px;
+    font-size: 24px;
+    font-family: 'Bangers', cursive;
+    width: 280px;
+}
+
+.appTitle {
+    text-align: center;
+    background: white;
+    border-radius: 8px;
+    border: 6px solid whitesmoke;
+    padding: 14px;
+    font-size: 50px;
+    font-family: 'Bangers', cursive;
+    margin-top: 20px;
+    line-height: 40px;
+}
+
+span.subTitle {
+    font-size: 25px!important;
+    line-height: 25px;
+}
+
+#status {
+    color: whitesmoke;
+    font-size: 32px;
+    font-family: 'Bangers', cursive;
+}
+
+.mt20 {
+    margin-top: 20px;
+}
+
+.ml20 {
+    margin-left: 60px!important;
+}
+
+.mr20 {
+    margin-right: 60px!important;
+}
+
+
+@keyframes ftS {
+    0% {
+        font-size: 14px;
+    }
+    30% {
+        font-size: 120px;
+    }
+    100% {
+        font-size: 14px;
+    }
+}
+
+@keyframes infinite-spinning {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(2880deg);
+    }
+}
+
+@keyframes strEtch {
+    0% {
+        transform: scale(1,1);
+        font-size: .3em!important;
+    }
+    30% {
+        transform: scale(2,1);
+        font-size: 400px;
+    }
+    100% {
+        transform: scale(1,1);
+        font-size: 1.8em!important;
+    }
+}
+
+.t404 {
+    font-size: 20px;
+    animation:
+            ftS 2s,
+            infinite-spinning 1.5s;
+}
+
+.t404:hover {
+    animation:
+            ftS 2s,
+            infinite-spinning 1.5s;
+}
+
+.st404 {
+    font-size: 20px!important;
+
 }
