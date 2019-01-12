@@ -7,7 +7,7 @@
 To setup the project for review do the following:
 1. Clone the repository
 2. Run command __npm install__ to install the project dependencies.<br />
-   If you have a __libpng__issue with the __image-webpack-loader__ package (some OSX version) please install the newest __libpng__ version:
+   If you have a __libpng__ issue with the __image-webpack-loader__ package (some OSX version) please install the newest __libpng__ version:
    ```
    brew install libpng
    ```
