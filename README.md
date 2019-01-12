@@ -6,7 +6,11 @@
 
 To setup the project for review do the following:
 1. Clone the repository
-2. Run command __npm install__ to install the project dependencies.
+2. Run command __npm install__ to install the project dependencies.<br />
+   If you have a __libpng__issue with the __image-webpack-loader__ package (some OSX version) please install the newest __libpng__ version:
+   ```
+   brew install libpng
+   ```
 3. Create an .env file in the project root folder and add you Infura API KEY:
    INFURA_KEY=YOUR_INFURA_API_KEY
 4. Create a .secret file in the project root folder and add your wallet seed.
